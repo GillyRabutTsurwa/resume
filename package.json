@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Digital resume webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles.scss styles.css -w --output-style compressed"
+  },
+  "keywords": [
+    "resume",
+    "resume-webpage",
+    "html",
+    "css",
+    "js",
+    "sass"
+  ],
+  "author": "Gilbert Rabut Tsurwa",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

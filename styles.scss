@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600i,700&display=swap');
+
+// ====================== Universal Reset & Main Styles ======================
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.7rem;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    &>* {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+ul {
+    list-style: none;
+}
+
+.heading-secondary {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.heading-tertiary {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+// ============================================================================
+
+.personal {
+    text-align: center;
+}
+
+.certifications {
+    width: 50%;
+    margin-top: 4em;
+
+    &__list {
+        &--item {
+            margin-bottom: 1.2rem;
+            list-style: disc;
+        }
+    }
+}
+
+.skills {
+    width: 20%;
+    margin-top: 3em;
+    text-align: center;
+
+    &__list {
+        &.first {
+            margin-bottom: 1.5rem;
+        }
+
+        &--item {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.web-links {
+    width: 40%;
+    margin-top: 3rem;
+
+    &__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        &--item {
+            padding: 0 2.5rem;
+        }
+    }
+}
+
+.other-skills {
+    width: 75%;
+    margin-top: 3rem;
+
+    &__list {
+        &--item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+
+            & p:first-child {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.work-experience {
+    width: 60%;
+    margin-top: 3rem;
+}

@@ -13,14 +13,60 @@ html {
 }
 
 body {
+    position: relative;
     font-size: 1.7rem;
     font-family: 'Source Sans Pro', sans-serif;
 
-    &>* {
-        margin-left: auto;
-        margin-right: auto;
+    &.dark-mode {
+        background-color: #343434;
+        color: #fff;
+    }
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+
+.toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 2.5rem;
+    width: 5rem;
+    height: 2.6rem;
+    border: 2px solid #343434;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.2rem;
+        height: 2.2rem;
+        background-color: #343434;
+        border-radius: 50%;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
     }
 
+    &.active {
+        border: 2px solid #FFF;
+    }
+
+    &.active::before {
+        background-color: #FFF;
+        left: 2.6rem;
+    }
+}
+
+
+.container {
+    &>* {
+        margin: 3rem auto;
+    }
 }
 
 ul {
@@ -90,6 +136,24 @@ ul {
 
         &--item {
             padding: 0 2.5rem;
+
+            &-link {
+                padding-bottom: 0.3rem;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+
+                &:link,
+                &:visited {
+                    text-decoration: none;
+                    color: currentColor;
+                    border-bottom: 2px solid transparent;
+                }
+
+                &:hover,
+                &:active {
+                    border-bottom: 2px solid currentColor;
+                }
+            }
         }
     }
 }
@@ -112,7 +176,11 @@ ul {
     }
 }
 
-.work-experience {
-    width: 60%;
+.work {
+    width: 50%;
     margin-top: 3rem;
+
+    &-experience:not(:last-child) {
+        margin-bottom: 3rem;
+    }
 }
